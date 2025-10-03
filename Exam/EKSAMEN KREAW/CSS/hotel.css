@@ -1,0 +1,116 @@
+body{
+  
+ background-image: url(../Images/Caesar\ palace.jpg); /* her settes bakgrunnsbilde for nettsiden*/
+ overflow: hidden; /* gjør slik at bildet ikke beveger seg med siden*/
+ background-size: cover; /* bildet skal være bakgrunnen for siden*/
+ background-repeat: no-repeat; /* hindrer bilde fra og gjenta seg */
+ background-position: center; /* Centrerer bildet */
+ background-attachment: fixed; /* Sørger for at bildet ikke ruller med siden */
+}
+
+#backButton img{
+  z-index: 3;
+  position: absolute;
+  width: 50px;
+  top: 5%;
+  left: 2%;
+}
+
+/*her styles tilbake-knappen*/
+
+
+#Bil img {
+ position: fixed; /* Posisjonerer bilen fast på skjermen */
+ z-index: 3; /* Gjør slik at bilen er forand elementer med lavere z index*/
+ top: 72%; /* Plasserer bilen top 72%*/
+ right: 0%; /* plasserer bilen */
+ width: 30%; /* bilens bredde settes */
+
+ 
+ transform: translate(0, 0) scale(1); /* setter på plass elementet til den opprinnelige posisjonen og størelsen*/
+ transition: transform 0.5s ease; /* her settes en overganseffekt på 0.5 */
+ transition-duration: 4s; /* overgangseffekten varer i 4 sekunder */
+ transition-delay: 0.3s; /* legger til en forsinkelse på 0.3 sekunder før overganseffekten starter*/
+}
+
+#Bil img:hover{
+  transform: translate(-1500px, 0) scale(0.9); /* denne hover effekten gjør sånn at bildet forflytter ser -15000px og reduserer størelsen */
+}
+
+
+
+#Next img{
+  z-index: 3; /* slik at andre bilde elementer med lavere z indeks er bak*/
+  position: absolute; 
+  top: 30%;
+  left: 10%;
+  animation: SIGN 10s infinite;
+}
+
+
+@keyframes SIGN {
+
+  from {
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(0.5) rotate(-20deg);
+  }
+
+}
+
+/*her har Next img elementet en z-index på 3 slik at andre bildeelementer med lavere indeks er bak,
+bildet har en absolutt posisjonering med en top på 30% og left på 10%. Det har blitt lagt til en animasjon for bildet som har
+blit kalt for "SIGN" denne animasjonen varer i 10 sekunder. under har vi @keyframes som viser hvordan elementer endrer seg over tid. 
+på starten er next img elementer ikke synelig med en scale på 0. men mot slutten blir den mer synelig, større og roterer*/
+
+
+
+#sun img{
+  z-index: 3; /* slik at andre bilde elementer med lavere z indeks er bak*/
+  position: absolute;
+  top: 5%;
+  left: 70%;
+  /*setter absolutt posisjonering med top 30% og left 10%*/
+  width: 15%; /*bredde på 15 %*/
+  animation: sun 6s infinite; /*animasjon som får sola til å blinke og rotere*/
+}
+
+@keyframes sun{
+
+
+  0%{
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.5) rotate(180deg);
+  }
+  100%{
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+/* keyframes setter animasjonen som for solen til å endre størelse og roterer 360 grader rundt */
+
+#Sky1 img{
+  z-index: 2; /* plaserer skyene bak bilen og sola*/
+  position: absolute;
+  top: 2%;
+  left: 52%;
+  width: 30%;
+}
+#Sky2 img{
+  z-index: 2; /*plaserer skyene bak bilen og sola*/
+  position: absolute;
+  top: 0%;
+  left: 75%;
+  width: 30%;
+}
+
+/* her har jeg plassert to sky bilde elementer med en z index på to som resulterer til at bildene plaseres bak z index 3 elementene.
+posisjonering på bilene er plassert på forskjellige steder på skjermen med bruk av absolutt posisjonering.
+width: 30%; angir bredden på skyene.*/
+
+

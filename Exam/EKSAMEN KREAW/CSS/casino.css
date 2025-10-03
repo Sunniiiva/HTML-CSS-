@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../Images/kasino-bg.webp');
+    background-size: cover;
+    object-fit: cover;
+}
+
+p {
+    font-size: 24px;
+    color: #000
+}
+
+
+.play-txt{
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+.erna {
+    position: absolute;
+    bottom: 0;
+    right: 70px;
+    width: 400px;
+    animation: erna-walking 0.6s ease-in-out forwards;
+}
+
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in-play 1s ease-in forwards 1.4s;
+    opacity: 0;
+}
+
+.play {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    text-decoration: none;
+    text-align: center;
+}
+
+#backButton img {
+    z-index: 3;
+    position: absolute;
+    width: 50px;
+    top: 5%;
+    left: 2%;
+}
+
+.snakke-bobble {
+    width: 300px;
+    height: 300px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 51% 75%, 13% 99%, 24% 75%, 0% 75%);
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    animation: fade-in-text 0.6s ease-in forwards 0.7s;
+}
+
+.bobble-tekst-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+@keyframes erna-walking {
+    0% {
+        right: -200px;
+        bottom: 0;
+    }
+
+    20% {
+        right: -100px;
+        bottom: 30px;
+    }
+
+    40% {
+        right: 0px;
+        bottom: 0px;
+    }
+
+    60% {
+        right: 30px;
+        bottom: 30px;
+    }
+
+    100% {
+        right: 70px;
+        bottom: 0px;
+    }
+}
+
+@keyframes fade-in-play {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fade-in-text {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (min-width: 1900px) {
+.play {
+    width: 300px;
+    height: 300px;
+}
+
+.erna {
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    width: 600px;
+}
+}
+
+
+@media screen and (min-width: 2300px) {
+    .play {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .erna {
+        position: absolute;
+        bottom: 0;
+        right: 130px;
+        width: 750px;
+    }
+    }

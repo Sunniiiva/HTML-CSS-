@@ -1,0 +1,179 @@
+/*Posisjonerer bilder på siden ved bruk av ID*/
+/*Organisert koden med alle animasjoner på slutten*/
+body {
+    background-image: url("../images/area51.jpeg");
+    background-size: cover;
+    overflow: hidden;
+    width: 100vw;
+}
+#erna {
+    position: absolute;
+    top: 45vh;
+    left: 72vw;
+    animation: ernaJump 0.3s ease 7s 5, ernaOut 3s ease-in 12s forwards;
+}
+#ernaHolding {
+    position: absolute;
+    left: 40vw;
+    top: 40vh;
+    opacity: 0;
+    animation: ernaHoldingOut 5.5s ease-in-out 12.5s 1 forwards;
+}
+#ufo {
+    position: absolute;
+    left: 25vw;
+    top: -100vh;
+    animation: ufoInOut 12s ease-in-out 1s 1;
+}
+#vedum {
+    position: absolute;
+    left: 35vw;
+    top: 60vh;
+    opacity: 0%;
+    animation: vedumAlienIn 3s ease-in 4s 1 forwards, vedumOut 3.2s ease-in-out 15s forwards;
+}
+#alien {
+    position: absolute;
+    top: 80vh;
+    left: 47vw;
+    opacity: 0;
+    animation: vedumAlienIn 3s ease-in 4s 1 forwards, alienMoveIt 4s linear 8s 1 forwards;
+}
+#alienSign {
+    position: absolute;
+    /*top: 0vh;*/
+    left: 5vw;
+    transform: scaleY(-1);
+    opacity: 0;
+    animation: alienSignIn 3s ease-in-out 7s 1 forwards;
+}
+#alienSign p {
+    transform: scaleY(-1);
+    position: absolute;
+    width: 170px;
+    top: 3vh;
+    left: 11.5vw;
+    font-family: sans-serif;
+}
+#buttonBack {
+    top: 5vh;
+    left: 2vw;
+}
+/*Under her er alle animasjoner*/
+/*Denne sender ned ufoen*/
+@keyframes ufoInOut {
+    0% {
+        top: -100vh;
+    }
+    25% {
+        top: 2vh;
+    }
+    50% {
+        top: 2vh;
+    }
+    100% {
+        top: -100vh;
+    }
+}
+/*Her dukker Vedum og alien opp etterhvert*/
+@keyframes vedumAlienIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*Erna hopper av glede når Vedum kommer*/
+@keyframes ernaJump {
+    0% {
+        top: 45vh;
+    }
+    50% {
+        top: 40vh;
+    }
+    100% {
+        top: 45vh;
+    }
+}
+/*Erna beveger seg mot Vedum*/
+@keyframes ernaOut {
+    0% {
+        top: 45vh;
+        left: 72vw;
+        opacity: 1;
+    }
+    50% {
+        top: 42vh;
+        left: 60vw;
+        opacity: 0;
+    }
+    100% {
+        top: 40vh;
+        left: 58vw; 
+        opacity: 0;
+    }
+}
+/*Nytt bilde av Erna hvor hun holder tak i Vedum dukker opp, og hun tar han med seg*/
+@keyframes ernaHoldingOut {
+    0% {
+        top: 43vh; 
+        left: 43vw; 
+        opacity: 0;
+    }
+    50% {
+        top: 40vh;
+        left: 40vw;
+        opacity: 1;
+    }
+    100% {
+        top: 20vh;
+        left: 100vw;
+        opacity: 1;
+    }
+}
+/*Vedum reiser ut av bildet*/
+@keyframes vedumOut {
+    0% {
+        top: 60vh; 
+        left: 35vw; 
+    }
+    100% {
+        top: 40vh; 
+        left: 100vw;
+    }
+}
+/*Romvesen som kom til jorden med Vedum rømmer!*/
+@keyframes alienMoveIt {
+    0% {
+        transform: rotate(0deg);
+        left: 47vw;
+        top: 80vh;
+    }
+    25% {
+        transform: rotate(360deg);
+    }
+    50% {
+        transform: rotate(720deg);
+    }
+    75% {
+        transform: rotate(1080deg);
+    }
+    100% {
+        transform: rotate(1440deg);
+        left: -10vw;
+        top: 20vh;
+    }
+}
+/*Romvesen kommer inn i bildet for å forklare situasjonen*/
+@keyframes alienSignIn {
+    0% {
+        top: -70vh;
+        opacity: 1;
+    }
+    100% {
+        top: -8vh;
+        opacity: 1;
+    }
+}
+

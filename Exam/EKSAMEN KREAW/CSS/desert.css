@@ -1,0 +1,120 @@
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#backButton img {
+    z-index: 3;
+    position: absolute;
+    width: 50px;
+    top: 5%;
+    left: 2%;
+}
+
+.desert { 
+    height: 100vh; 
+    position: relative; 
+    background-image: url("../Images/desertlandscape4_50.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.erna {
+    width: 25vh;
+    position: absolute;
+    bottom: 25%;
+    right: 50%;
+    transform: translate(50%, 50%); 
+}
+
+.cactus1 {
+    width: 40vh;
+    position: absolute;
+    bottom: 25%; 
+    right: 80%;
+    transform: translate(20%, 50%); 
+}
+
+.cactus2 {
+    width: 30vh;
+    position: absolute;
+    bottom: 30%;
+    right: 5%;
+    transform: translate(20%, 50%); 
+}
+
+.cactus3 {
+    width: 20vh;
+    position: absolute;
+    bottom: 20%; 
+    right: 25%;
+    transform: translate(10%, 50%);
+}
+
+.cactus4 {
+    width: 20vh;
+    position: absolute;
+    bottom: 10%;
+    right: 65%;
+    transform: translate(10%, 50%);
+}
+
+.cloud1 {
+    width: 50vh;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    animation: cloud1 50s linear infinite;
+}
+
+.cloud2 {
+    width: 40vh;
+    left: -500px;
+    position: absolute;
+    top: 5%;
+    animation: cloud2 80s linear infinite;
+}
+
+
+.thumbleweed {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100px;
+    animation: thumbleweed 4s linear infinite;
+}
+
+
+@keyframes cloud1{
+    0% {
+        left: 0;
+    }
+    100% {
+        left: calc(100% - 100px); 
+    }
+}
+
+@keyframes cloud2{
+    0% {
+        left: 0;
+    }
+    100% {
+        left: calc(100% - 100px); 
+    }
+}
+
+@keyframes thumbleweed {
+    from {
+        left: 0;
+    }
+    to {
+        transform: rotate(360deg);
+        left: 100%;
+    }
+}
+
+
+
+

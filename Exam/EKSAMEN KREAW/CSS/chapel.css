@@ -1,0 +1,97 @@
+/*Posisjonerer bilder på siden ved bruk av ID*/
+/*Organisert koden med alle animasjoner på slutten*/
+body {
+    background-image: url("../images/whitechapel2_50.jpeg");
+    background-size: cover;
+    overflow: hidden;
+    width: 100vw;
+}
+#erna {
+    position: absolute;
+    left: 70vw;
+    top: 18vh;
+    z-index: 2;
+}
+#veil {
+    position: absolute;
+    left: 75vw;
+    top: 19vh;
+    animation: veilIn 2s ease-in;
+    z-index: 2;
+}
+#vedum {
+    position: absolute;
+    transform: scaleX(-1);
+    left: 35vw;
+    top: 12vh;
+    z-index: 2;
+}
+#pillow {
+    position: absolute;
+    top: 47vh;
+    left: 67vw;
+    transform: rotate(50deg);
+    z-index: 2;
+}
+#topHat {
+    position: absolute;
+    transform: rotate(-22deg);
+    left: 59vw;
+    top: 13vh;
+    animation: hatIn 2s ease-in-out;
+    z-index: 2;
+}
+#plane {
+    position: absolute;
+    left: 100%;
+    animation: planeMoveIn 15s ease-in-out infinite;
+    z-index: 1;
+}
+#plane p {
+    position: relative;
+    left: 310px;
+    bottom: 121px;
+    font-size: 19px;
+    color: rgb(43, 101, 226);
+    text-shadow: 1px 1px 1px rgb(233, 218, 247);
+    transform: rotate(5deg);
+    z-index: 1;
+}
+#buttonBack {
+    top: 5vh;
+    left: 2vw;
+}
+/*Her kommer alle animasjonene laget med keyframes*/
+/*Denne henter inn Ernas slør*/
+@keyframes veilIn {
+    0% {
+        top: -40%;
+    }
+    100% {
+        top: 19%;
+    }
+}
+/*Denne sørger for at flyet flyger på himmelen*/
+@keyframes planeMoveIn {
+    0% {
+        left: 100%;
+    }
+    50% {
+        left: 7%;
+    }
+    75% {
+        left: 7%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+/*Her kommer Vedums hatt inn*/
+@keyframes hatIn {
+    0% {
+        top: -40%;
+    }
+    100% {
+        top: 13%;
+    }
+}

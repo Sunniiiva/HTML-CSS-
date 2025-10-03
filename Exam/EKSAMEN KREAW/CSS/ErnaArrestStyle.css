@@ -1,0 +1,152 @@
+html{
+    overflow: hidden;
+}
+body{
+    filter: grayscale(45%);
+    filter: contrast(100%);
+    background-color: black;
+    overflow: hidden;
+}
+/* Hoved element alt er plassert i */
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../Images/Arrest.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+/* Elementer og bilder */
+#backButton img {
+    z-index: 3;
+    position: absolute;
+    width: 50px;
+    top: 5%;
+    left: 2%;
+}
+#telephone{
+    position: absolute;
+    height: 28vh;
+    width: 14vh;
+    top: 20vh;
+    left:3vh;
+    transform: rotate(-13deg);
+    padding: 2vw;
+    animation-name: TelephoneTextShake;
+    animation-duration: 2ms;
+    animation-iteration-count: infinite;
+    
+    white-space:nowrap;
+    
+    font-size: 3vh;
+    font-family:fantasy;
+    color: rgb(216, 216, 11);
+}
+
+#Erna{
+    position: fixed;
+    height: fit-content;
+    width: fit-content;
+    top:53vh;
+    left: 70%;
+
+
+}
+
+#ErnaIMG{
+height: 80vh;
+width: auto;
+position: sticky;
+
+}
+
+#Moxnes{
+    position: absolute;
+height: fit-content;
+width: max-content;
+top:20vh;
+left: 7vw;
+transition-delay: 0, 20000s;
+
+}
+#MoxnesIMG{
+    height: 80vh;
+    width: auto;
+    z-index:1;
+    transition-delay: 0, 20000s;
+    
+}
+#Glasses{
+    position: absolute;
+    right: 21vw;
+    width: 4vw;
+    z-index: 2;
+    top: -28vh;
+    transition-delay: 0, 20000s;
+}
+
+#bubbletxt{
+    position: absolute;
+    padding: 1vh;
+    top: 34vh;
+    left:83vw;
+    width: 15vw;
+    height: 15vh;
+    font-size: 2vh;
+    font-family: fantasy;
+    background-color: bisque;
+    border-radius: 5%;
+}
+
+/* AnimasjonsTrigger*/
+
+#Moxnes:hover #Glasses{
+    animation-name:SunglassDrop;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transition-delay: 0, 20000s;
+    
+}
+
+
+/* Animasjoner */
+
+@keyframes SunglassDrop{
+    0%,
+    0%{top:-20vh;
+        
+        
+    }
+    50%{top:-10vh;
+        
+    
+    }
+
+    100%{top:3vh;
+        
+
+    }
+
+
+
+}
+
+@keyframes TelephoneTextShake {
+    0% { transform: translateX(0vw);
+         transform: rotate(-13deg); 
+    }
+    25% { transform: translateX(0.1vw);
+          transform: rotate(-12deg); 
+    }
+    50% { transform: translateX(-0.1vw);
+          transform: rotate(-13deg); 
+    }
+    75% { transform: translateX(0.1vw);
+          transform: rotate(-12deg);
+    }
+    100% { transform: translateX(0vw);
+           transform: rotate(-13deg); }
+   }

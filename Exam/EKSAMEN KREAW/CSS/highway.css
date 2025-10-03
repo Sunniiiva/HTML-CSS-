@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+#backButton img {
+    z-index: 3;
+    position: absolute;
+    width: 50px;
+    top: 5%;
+    left: 2%;
+}
+
+.desert { 
+    height: 100vh; 
+    position: relative; 
+    background-image: url("../Images/Desert-Road-2_50.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.car {
+    width: 20vw; 
+    position: absolute; 
+    top: 60%;
+    left: -100%; 
+    animation: car 9s linear;
+}
+
+
+.UFO {
+    width: 10vw;
+    position: absolute;
+    top: 30%;
+    left: -100%; 
+    animation: UFO 5s linear 2s;
+}
+
+
+@keyframes car {
+    0% {
+        transform: translate(100px); 
+    }
+    100% {
+        transform: translate(3000px);
+    }
+}
+
+
+@keyframes UFO {
+    0% {
+        transform: translate(-400px, -100px); 
+    }
+    100% {
+        transform: translate(3000px, -300px);
+    }
+}
